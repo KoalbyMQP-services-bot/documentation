@@ -1,0 +1,140 @@
+.features {
+  display: flex;
+  align-items: center;
+  padding: 2rem 0;
+  width: 100%;
+  background-color: var(--custom-background-light);
+}
+
+.featureCard {
+  height: 100%;
+  transition: all 0.3s ease;
+  border: none;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+  margin: 1rem 0;
+  background: var(--custom-background-light);
+}
+
+.featureCard:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+}
+
+.featureContent {
+  padding: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
+}
+
+.featureIcon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--custom-background-light);
+  width: 64px;
+  height: 64px;
+  border-radius: 16px;
+}
+
+.featureText {
+  flex-grow: 1;
+}
+
+.featureText h3 {
+  font-size: 1.5rem;
+  margin-bottom: 0.5rem;
+  color: var(--custom-text-dark);
+}
+
+.featureText p {
+  margin: 0;
+  color: var(--custom-text-light);
+  line-height: 1.6;
+}
+
+.featureLink {
+  margin-top: 1.5rem;
+  text-align: right;
+}
+
+.docGrid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 1.5rem;
+  padding: 1rem;
+}
+
+.docButton {
+  display: flex;
+  align-items: center;
+  padding: 1.5rem;
+  background-color: var(--custom-background-light);
+  border: 1px solid var(--custom-border-color);
+  border-radius: 8px;
+  color: inherit;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.docButton:hover {
+  background-color: var(--custom-background-light);
+  border-color: var(--custom-text-dark);
+  transform: translateY(-2px);
+  text-decoration: none;
+  color: inherit;
+}
+
+.docIcon {
+  font-size: 1.5rem;
+  margin-right: 1rem;
+  padding: 0.75rem;
+  background-color: var(--custom-background-light);
+  border: 1px solid var(--custom-border-color);
+  border-radius: 8px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.docContent {
+  flex: 1;
+}
+
+.docTitle {
+  font-size: 1.1rem;
+  margin: 0 0 0.25rem 0;
+  color: var(--custom-text-dark);
+}
+
+.docDescription {
+  font-size: 0.9rem;
+  margin: 0;
+  color: var(--custom-text-light);
+  line-height: 1.4;
+}
+
+.docArrow {
+  margin-left: 1rem;
+  font-size: 1.25rem;
+  color: var(--custom-text-light);
+  transition: transform 0.2s ease;
+}
+
+.docButton:hover .docArrow {
+  transform: translateX(4px);
+  color: var(--custom-text-dark);
+}
+
+@media screen and (max-width: 996px) {
+  .features {
+    padding: 1rem 0;
+  }
+  
+  .docGrid {
+    grid-template-columns: 1fr;
+    padding: 1rem;
+  }
+}

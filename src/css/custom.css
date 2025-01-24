@@ -1,0 +1,241 @@
+/**
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
+ */
+
+/* You can override the default Infima variables here. */
+:root {
+  --ifm-color-primary: #2D2D2D;
+  --ifm-color-primary-dark: #262626;
+  --ifm-color-primary-darker: #1A1A1A;
+  --ifm-color-primary-darkest: #0D0D0D;
+  --ifm-color-primary-light: #575757;
+  --ifm-color-primary-lighter: #666666;
+  --ifm-color-primary-lightest: #808080;
+  --ifm-code-font-size: 95%;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.06);
+  
+  /* Custom colors */
+  --custom-background: #FAFAFA;
+  --custom-background-secondary: #F5F5F5;
+  --custom-text: #2D2D2D;
+  --custom-text-secondary: #575757;
+  --custom-border-color: #E0E0E0;
+  --custom-shadow: rgba(0, 0, 0, 0.1);
+  --custom-shadow-darker: rgba(0, 0, 0, 0.15);
+}
+
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  --ifm-color-primary: #E1E1E1;
+  --ifm-color-primary-dark: #CCCCCC;
+  --ifm-color-primary-darker: #B3B3B3;
+  --ifm-color-primary-darkest: #999999;
+  --ifm-color-primary-light: #EBEBEB;
+  --ifm-color-primary-lighter: #F5F5F5;
+  --ifm-color-primary-lightest: #FFFFFF;
+  --docusaurus-highlighted-code-line-bg: rgba(255, 255, 255, 0.1);
+  
+  /* Custom colors - dark mode */
+  --custom-background: #121212;
+  --custom-background-secondary: #1A1A1A;
+  --custom-text: #E1E1E1;
+  --custom-text-secondary: #A0A0A0;
+  --custom-border-color: #2D2D2D;
+  --custom-shadow: rgba(0, 0, 0, 0.2);
+  --custom-shadow-darker: rgba(0, 0, 0, 0.3);
+}
+
+/* Global styles */
+body {
+  background-color: var(--custom-background);
+  color: var(--custom-text);
+}
+
+/* Navbar styles */
+.navbar {
+  background-color: var(--custom-background-secondary);
+  border-bottom: 1px solid var(--custom-border-color);
+}
+
+.navbar__title {
+  color: var(--custom-text);
+  font-weight: 600;
+}
+
+.navbar__link {
+  color: var(--custom-text-secondary);
+}
+
+.navbar__link:hover {
+  color: var(--custom-text);
+}
+
+/* Main content area */
+.main-wrapper {
+  background-color: var(--custom-background);
+}
+
+article {
+  color: var(--custom-text);
+}
+
+/* Sidebar styles */
+.menu {
+  background-color: var(--custom-background-secondary);
+  padding: 1rem;
+  border-right: 1px solid var(--custom-border-color);
+}
+
+.menu__link {
+  color: var(--custom-text-secondary);
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.menu__link:hover {
+  color: var(--custom-text);
+  background-color: var(--custom-background);
+}
+
+.menu__link--active {
+  color: var(--custom-text);
+  background-color: var(--custom-background);
+}
+
+/* Footer Styles */
+.footer {
+  background-color: var(--custom-background-secondary);
+  border-top: 1px solid var(--custom-border-color);
+  padding: 2rem 0;
+  font-size: 0.9rem;
+}
+
+.footer .container {
+  max-width: var(--ifm-container-width);
+  margin: 0 auto;
+  padding: 0 var(--ifm-spacing-horizontal);
+  position: relative;
+}
+
+.footer .row {
+  display: grid;
+  grid-template-columns: 200px 1fr 200px;
+  margin: 0;
+}
+
+.footer-section-left {
+  grid-column: 1;
+}
+
+.footer-section-right {
+  grid-column: 3;
+}
+
+.footer__title {
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--custom-text);
+  margin-bottom: 1rem;
+}
+
+.footer__item {
+  padding: 0.25rem 0;
+}
+
+.footer__link-item {
+  color: var(--custom-text-secondary);
+  transition: color 0.2s ease;
+}
+
+.footer__link-item:hover {
+  color: var(--custom-text);
+  text-decoration: none;
+}
+
+.footer__copyright {
+  color: var(--custom-text-secondary);
+  font-size: 0.875rem;
+  margin-top: 2rem;
+  text-align: center;
+  grid-column: 1 / -1;
+}
+
+/* Card and button styles */
+.card {
+  background-color: var(--custom-background-secondary);
+  border: 1px solid var(--custom-border-color);
+  border-radius: 8px;
+  box-shadow: 0 2px 4px var(--custom-shadow);
+  transition: all 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--custom-shadow-darker);
+}
+
+.button--primary {
+  background-color: var(--custom-text);
+  color: var(--custom-background) !important;
+  border: none;
+  padding: 12px 24px;
+  font-weight: 500;
+  font-size: 1.1rem;
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px var(--custom-shadow);
+  border-radius: 8px;
+}
+
+.button--primary:hover {
+  background-color: var(--custom-text-secondary);
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px var(--custom-shadow-darker);
+}
+
+[data-theme='dark'] .button--primary {
+  background-color: #E1E1E1;
+  color: #121212 !important;
+}
+
+[data-theme='dark'] .button--primary:hover {
+  background-color: #FFFFFF;
+}
+
+/* Code blocks */
+.prism-code {
+  background-color: var(--custom-background-secondary) !important;
+  border: 1px solid var(--custom-border-color);
+  border-radius: 8px;
+}
+
+/* Table styles */
+table {
+  background-color: var(--custom-background-secondary);
+  border: 1px solid var(--custom-border-color);
+  border-radius: 8px;
+}
+
+th {
+  background-color: var(--custom-background);
+}
+
+/* Responsive footer */
+@media (max-width: 996px) {
+  .footer {
+    padding: 2rem 0;
+  }
+  
+  .footer .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 2rem;
+  }
+  
+  .footer__col {
+    margin-bottom: 0;
+  }
+}
