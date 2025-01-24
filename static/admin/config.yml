@@ -4,6 +4,8 @@ backend:
   branch: main
   base_url: https://github.com
   auth_endpoint: login/oauth/authorize
+  auth_type: oauth
+  app_id: Iv23liZ6Ic2OTi2gCBW9
 
 # Media configurations
 media_folder: "static/img"
