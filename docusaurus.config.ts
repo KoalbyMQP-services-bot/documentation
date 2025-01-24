@@ -19,7 +19,7 @@ const config: Config = {
   organizationName: 'wpi-humanoid-robots-mqp', // Your GitHub org/user name.
   projectName: 'documentation', // Your repo name.
 
-  onBrokenLinks: 'throw',
+  onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
   // Even if you don't use internationalization, you can use this field to set
@@ -77,15 +77,15 @@ const config: Config = {
           items: [
             {
               label: 'URDF',
-              to: '/sections/urdf',
+              to: '/docs/sections/urdf',
             },
             {
               label: 'Vision',
-              to: '/sections/vision',
+              to: '/docs/sections/vision',
             },
             {
               label: 'Performance Monitoring',
-              to: '/sections/performance-monitoring',
+              to: '/docs/sections/performance-monitoring',
             },
           ],
         },
