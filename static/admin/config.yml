@@ -2,7 +2,7 @@ backend:
   name: github
   repo: KoalbyMQP-services-bot/documentation
   branch: main
-  base_url: https://api.github.com
+  base_url: https://github.com
   auth_endpoint: login/oauth/authorize
 
 # Media configurations
