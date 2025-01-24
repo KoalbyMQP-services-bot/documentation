@@ -77,15 +77,15 @@ const config: Config = {
           items: [
             {
               label: 'URDF',
-              to: '/docs/sections/urdf',
+              to: '/sections/urdf',
             },
             {
               label: 'Vision',
-              to: '/docs/sections/vision',
+              to: '/sections/vision',
             },
             {
               label: 'Performance Monitoring',
-              to: '/docs/sections/performance-monitoring',
+              to: '/sections/performance-monitoring',
             },
           ],
         },
