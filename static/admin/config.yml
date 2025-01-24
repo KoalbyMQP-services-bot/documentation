@@ -2,9 +2,8 @@ backend:
   name: github
   repo: KoalbyMQP-services-bot/documentation
   branch: main
-  auth_scope: repo
   base_url: https://api.github.com
-  auth_endpoint: oauth/authorize
+  auth_endpoint: login/oauth/authorize
 
 # Media configurations
 media_folder: "static/img"
