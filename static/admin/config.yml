@@ -4,6 +4,7 @@ backend:
   branch: main
   auth_scope: repo
   base_url: https://api.github.com
+  auth_endpoint: oauth/authorize
 
 media_folder: "static/img"
 public_folder: "/img"
