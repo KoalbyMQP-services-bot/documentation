@@ -22,6 +22,9 @@ const config: Config = {
   onBrokenLinks: 'warn',
   onBrokenMarkdownLinks: 'warn',
 
+  // Static directory configuration
+  staticDirectories: ['static'],
+
   // Ignore the admin path since it's handled by Decap CMS
 
   // Even if you don't use internationalization, you can use this field to set
