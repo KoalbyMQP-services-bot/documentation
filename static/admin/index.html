@@ -4,7 +4,6 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Content Manager</title>
-    <script src="https://identity.netlify.com/v1/netlify-identity-widget.js"></script>
 </head>
 <body>
     <script>
@@ -17,9 +16,9 @@
                 name: 'github',
                 repo: 'KoalbyMQP-services-bot/documentation',
                 branch: 'main',
-                auth_scope: 'repo',
                 base_url: 'https://api.github.com',
-                auth_endpoint: 'oauth/authorize'
+                auth_endpoint: 'login/oauth/authorize',
+                client_id: 'Iv23liZ6Ic2OTi2gCBW9'
             },
             media_folder: 'static/img',
             public_folder: '/img',
