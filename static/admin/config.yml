@@ -1,27 +1,24 @@
 backend:
- name: github
- repo: KoalbyMQP-services-bot/documentation
- branch: main
- auth_scope: repo
- base_url: https://api.github.com
- auth_endpoint: oauth/authorize
+  name: github
+  repo: KoalbyMQP-services-bot/documentation
+  branch: main
+  auth_scope: repo
+  base_url: https://api.github.com
+  auth_endpoint: oauth/authorize
 
+# Media configurations
 media_folder: "static/img"
 public_folder: "/img"
 
-media_library:
- name: uploadcare
- config:
-   publicKey: your-public-key
-
+# Collections configuration
 collections:
- - name: "docs"
-   label: "Documentation"
-   folder: "docs"
-   create: true
-   slug: "{{slug}}"
-   fields:
-     - {label: "Title", name: "title", widget: "string"}
-     - {label: "Sidebar Label", name: "sidebar_label", widget: "string", required: false}
-     - {label: "Sidebar Position", name: "sidebar_position", widget: "number", required: false}
-     - {label: "Body", name: "body", widget: "markdown"}
+  - name: "docs"
+    label: "Documentation"
+    folder: "docs"
+    create: true
+    slug: "{{slug}}"
+    fields:
+      - {label: "Title", name: "title", widget: "string"}
+      - {label: "Sidebar Label", name: "sidebar_label", widget: "string", required: false}
+      - {label: "Sidebar Position", name: "sidebar_position", widget: "number", required: false}
+      - {label: "Body", name: "body", widget: "markdown"}
