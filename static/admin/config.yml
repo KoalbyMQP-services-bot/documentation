@@ -2,7 +2,7 @@ backend:
   name: github
   repo: KoalbyMQP-services-bot/documentation
   branch: main
-  auth_scope: public_repo
+  auth_scope: repo
   base_url: https://api.github.com
   auth_endpoint: oauth/authorize
 

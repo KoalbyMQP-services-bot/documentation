@@ -16,12 +16,10 @@
                 name: 'github',
                 repo: 'KoalbyMQP-services-bot/documentation',
                 branch: 'main',
-                client_id: 'Iv23liZ6Ic2OTi2gCBW9',
-                oauth_root_url: 'https://github.com',
-                site_domain: 'documentation-omega-bay.vercel.app',
-                auth_scope: 'public_repo'
+                base_url: 'https://api.netlify.com',
+                auth_endpoint: 'auth',
+                site_domain: 'documentation-omega-bay.vercel.app'
             },
-            local_backend: false,
             load_config_file: false,
             media_folder: 'static/img',
             public_folder: '/img',
@@ -33,15 +31,14 @@
                     create: true,
                     slug: '{{slug}}',
                     fields: [
-                        {label: 'Title', name: 'title', widget: 'string'},
-                        {label: 'Sidebar Label', name: 'sidebar_label', widget: 'string', required: false},
-                        {label: 'Sidebar Position', name: 'sidebar_position', widget: 'number', required: false},
-                        {label: 'Body', name: 'body', widget: 'markdown'}
+                        { label: 'Title', name: 'title', widget: 'string' },
+                        { label: 'Sidebar Label', name: 'sidebar_label', widget: 'string', required: false },
+                        { label: 'Sidebar Position', name: 'sidebar_position', widget: 'number', required: false },
+                        { label: 'Body', name: 'body', widget: 'markdown' }
                     ]
                 }
             ]
         };
-        
         CMS.init({ config });
     </script>
 </body>
