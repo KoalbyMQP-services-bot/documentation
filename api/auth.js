@@ -6,34 +6,39 @@ export default async function handler(req, res) {
     return res.status(405).json({ message: 'Method not allowed' });
   }
 
+  const { code } = req.body;
+
+  if (!code) {
+    return res.status(400).json({ error: 'Code is required' });
+  }
+
   try {
-    const { code } = req.body;
-
-    if (!code) {
-      return res.status(400).json({ error: 'Code is required' });
-    }
-
-    const response = await fetch('https://github.com/login/oauth/access_token', {
+    // Exchange the code for an access token
+    const tokenResponse = await fetch('https://github.com/login/oauth/access_token', {
       method: 'POST',
       headers: {
         'Accept': 'application/json',
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        client_id: clientId,
-        client_secret: clientSecret,
+        client_id: process.env.OAUTH_CLIENT_ID,
+        client_secret: process.env.OAUTH_CLIENT_SECRET,
         code: code,
       }),
     });
 
-    const data = await response.json();
-    
-    if (data.error) {
-      console.error('GitHub OAuth error:', data);
-      return res.status(400).json(data);
+    const tokenData = await tokenResponse.json();
+
+    if (tokenData.error) {
+      console.error('GitHub OAuth error:', tokenData);
+      return res.status(400).json(tokenData);
     }
 
-    return res.status(200).json(data);
+    // Return the token response in the format Decap CMS expects
+    return res.json({
+      token: tokenData.access_token,
+      provider: 'github',
+    });
   } catch (error) {
     console.error('OAuth error:', error);
     return res.status(500).json({ error: 'Internal server error' });

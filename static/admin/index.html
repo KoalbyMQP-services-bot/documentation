@@ -16,10 +16,14 @@
                 name: 'github',
                 repo: 'KoalbyMQP-services-bot/documentation',
                 branch: 'main',
+                base_url: window.location.origin,
                 auth_endpoint: 'https://github.com/login/oauth/authorize',
                 token_endpoint: '/api/auth',
-                client_id: 'Iv23liZ6Ic2OTi2gCBW9'
+                client_id: 'Iv23liZ6Ic2OTi2gCBW9',
+                app_id: ''
             },
+            local_backend: false,
+            load_config_file: false,
             media_folder: 'static/img',
             public_folder: '/img',
             collections: [
