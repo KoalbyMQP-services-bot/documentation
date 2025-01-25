@@ -21,9 +21,10 @@ export default async function handler(req, res) {
         'Content-Type': 'application/json',
       },
       body: JSON.stringify({
-        client_id: process.env.OAUTH_CLIENT_ID,
-        client_secret: process.env.OAUTH_CLIENT_SECRET,
+        client_id: clientId,
+        client_secret: clientSecret,
         code: code,
+        redirect_uri: `${process.env.NEXT_PUBLIC_SITE_URL}/admin/`
       }),
     });
 
